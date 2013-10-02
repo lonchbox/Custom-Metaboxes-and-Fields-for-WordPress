@@ -308,6 +308,9 @@ class cmb_Meta_Box {
 					echo '<h5 class="cmb_metabox_title">', $field['name'], '</h5>';
 					echo '<p class="cmb_metabox_description">', $field['desc'], '</p>';
 					break;
+				case 'divider':
+					echo '<hr>';
+					break;					
 				case 'wysiwyg':
 					wp_editor( $meta ? $meta : $field['std'], $field['id'], isset( $field['options'] ) ? $field['options'] : array() );
 			        echo '<p class="cmb_metabox_description">', $field['desc'], '</p>';
